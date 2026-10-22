@@ -4,40 +4,36 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>P133 國土比一比｜GeoShift</title>
-  <link rel="stylesheet" href="assets/app.css?v=0.002">
-  <link rel="stylesheet" href="assets/overlay.css?v=0.002">
+  <link rel="stylesheet" href="assets/app.css?v=0.003">
+  <link rel="stylesheet" href="assets/overlay.css?v=0.003">
+  <link rel="stylesheet" href="assets/map.css?v=0.003">
 </head>
 <body>
   <header class="site-header">
     <div class="lab-mark">慈濟大學　經營管理學系　好玩實驗室　作品</div>
     <div class="title-row">
-      <div><p class="project-code">P133 WEB VERSION V0.002</p><h1>國土比一比 <span>GeoShift</span></h1></div>
+      <div><p class="project-code">P133 WEB VERSION V0.003</p><h1>國土比一比 <span>GeoShift</span></h1></div>
       <p class="tagline">把地理實體移到世界各地，重新看見面積、尺度與投影。</p>
     </div>
   </header>
 
   <main>
     <section class="control-panel" aria-label="比較控制項">
-      <label>移動的地理實體<select id="entity-a" aria-label="移動的地理實體"></select></label>
-      <label>放置位置<select id="target-place" aria-label="放置位置"></select></label>
-      <button id="place-button" class="primary">放到此處</button>
-      <div class="mode-switch" aria-label="顯示模式">
-        <button class="mode active" data-mode="mercator">Mercator<br><small>常見網路地圖</small></button>
-        <button class="mode" data-mode="equal-area">等面積<br><small>面積比例一致</small></button>
-      </div>
+      <label>比較者<select id="entity-a" aria-label="選擇比較者"></select></label>
+      <button id="return-home" class="secondary">回到原位</button>
       <label class="rotation-control">旋轉 <output id="rotation-output">0°</output><input id="rotation" type="range" min="0" max="359" value="0" aria-label="旋轉角度"></label>
       <button id="reset-rotation" class="secondary">回正北</button>
     </section>
 
     <section class="workspace">
       <article class="map-card">
-        <div class="map-heading"><div><h2 id="map-title">臺灣放在鄭州</h2><p id="map-help">拖曳臺灣以移動中心；再用旋轉控制改變方向。</p></div><span id="projection-badge">TRUE SCALE · MERCATOR</span></div>
+        <div class="map-heading"><div><h2 id="map-title">從臺灣開始，移到世界任何地方</h2><p id="map-help">直接拖曳半透明比較者；拖曳空白地圖可平移，滾輪可縮放，Shift＋拖曳比較者可旋轉。</p></div><span id="projection-badge">TRUE SCALE · MERCATOR</span></div>
         <div id="map" role="application" aria-label="互動式世界地圖"><svg id="map-svg" viewBox="0 0 1000 530" aria-hidden="true"></svg></div>
-        <p id="drag-note" class="map-note">此模式以地表公尺尺度置入輪廓；Mercator 僅改變畫面外觀。城市距離與臺灣尺寸不因旋轉或投影而改變。</p>
+        <p id="drag-note" class="map-note">半透明比較者以地表公尺尺度置入；原位置的行政地圖保持不變。城市會在放大後顯示；實體輪廓和城市距離不受旋轉影響。</p>
       </article>
       <aside class="facts-card">
         <p class="eyebrow">TRUE AREA / 真實面積</p>
-        <div id="facts" class="facts-empty">載入真實尺度疊圖…</div>
+        <div id="facts" class="facts-empty">載入公開行政界底圖…</div>
         <div class="teaching-note"><strong>看懂這張圖</strong><br>Mercator 方便航海與方向判讀，卻會讓高緯度地區在畫面上顯得較大。等面積模式則保留面積比例，但形狀會改變。</div>
       </aside>
     </section>
@@ -46,7 +42,7 @@
     <section class="method"><h2>這一版在做什麼？</h2><div class="method-grid"><p><b>比較對象不限國家。</b>國家、行政區、島嶼與地理區域都可成為「地理實體」。</p><p><b>數字與畫面分開看。</b>km² 與倍數是固定的量化資料；地圖外觀則會受投影影響。</p><p><b>先探索，再精確化。</b>V0.001 先驗證互動與教學流程；正式資料將改採可追溯來源的權威邊界資料。</p></div></section>
   </main>
   <footer>P133 國土比一比｜GeoShift　·　慈濟大學經營管理學系 好玩實驗室</footer>
-  <script src="data/entities.js?v=0.002"></script>
-  <script src="assets/app.js?v=0.002"></script>
+  <script src="data/entities.js?v=0.003"></script>
+  <script src="assets/app.js?v=0.003"></script>
 </body>
 </html>

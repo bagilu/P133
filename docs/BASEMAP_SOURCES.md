@@ -1,0 +1,13 @@
+# V0.003 公開行政界底圖
+
+本 ZIP 內的下列資料來自 Natural Earth 1:110m Cultural Vectors：
+
+- `ne_110m_admin_0_countries.geojson`：國家／地區行政界，版本 5.1.1。
+- `ne_110m_admin_1_states_provinces.geojson`：州／省級行政界，版本 5.1.1。
+- `ne_110m_populated_places.geojson`：城市點位，版本 5.1.2。
+
+Natural Earth 為 public domain map dataset。本專案將資料隨 GitHub Pages 靜態網站部署，不呼叫 Google Maps、Mapbox 或任何外部地圖 API。
+
+## 邊界口徑
+
+Natural Earth 預設呈現 de facto（事實控制）邊界，並提供部分不同觀點的資料變體。P133 的底圖僅作教育性地圖視覺化與尺度比較，不能作為主權、法律、行政或測量判斷依據。後續若加入特定敏感地區的教學情境，必須將資料版本、口徑與說明顯示於介面。
