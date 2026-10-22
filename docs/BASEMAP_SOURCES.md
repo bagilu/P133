@@ -6,6 +6,11 @@
 - `ne_110m_admin_1_states_provinces.geojson`：州／省級行政界，版本 5.1.1。
 - `ne_110m_populated_places.geojson`：城市點位，版本 5.1.2。
 
+V0.004 另加入：
+
+- `taiwan_detailed.geojson`：Natural Earth 1:10m Admin 0 Countries v5.1.1 中的臺灣輪廓，406 個原始座標點。
+- `cities_important.geojson`：由 Natural Earth 1:10m Populated Places v5.1.2 篩選人口 50 萬以上城市，並保留鄭州、洛陽、開封、新鄉、許昌等教學情境城市；共 1,010 點。
+
 Natural Earth 為 public domain map dataset。本專案將資料隨 GitHub Pages 靜態網站部署，不呼叫 Google Maps、Mapbox 或任何外部地圖 API。
 
 ## 邊界口徑
